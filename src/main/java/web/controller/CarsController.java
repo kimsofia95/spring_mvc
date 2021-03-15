@@ -25,15 +25,6 @@ public class CarsController {
         carsCreated = true;
     }
 
-  /* @GetMapping(value = "/cars")
-    public String printCars(ModelMap model) {
-        if (!carsCreated) {
-            addCars();
-        }
-        model.addAttribute("cars", Car.getCarsList());
-        return "cars";
-    }*/
-
    @GetMapping(value = "/cars")
     public String printCarsCount(ModelMap model, @RequestParam(value = "count", required = false) String count) {
        if (!carsCreated) {
